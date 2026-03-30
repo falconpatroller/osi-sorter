@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" width="120" height="150" role="img" aria-label="Lightbulb off">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M60 10c-22.6 0-41 18.4-41 41 0 14.1 7.3 26.5 18.4 33.8 5.8 3.8 8.6 9.6 8.6 15.7V104h28v-3.5c0-6.2 2.9-11.9 8.8-15.9C93.8 77.5 101 65.1 101 51c0-22.6-18.4-41-41-41z" fill="#dfe6eb" stroke="#a9b6c4" stroke-width="3"/>
+    <rect x="44" y="104" width="32" height="13" rx="4" fill="#a9b0b8"/>
+    <rect x="42" y="117" width="36" height="10" rx="4" fill="#8b929b"/>
+    <rect x="44" y="127" width="32" height="10" rx="4" fill="#737b85"/>
+    <path d="M43 41c4-13 16-21 30-20" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

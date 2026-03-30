@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSI Model Brick Sorter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell" aria-labelledby="app-title">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Interactive Sorting Activity</p>
+        <h1 id="app-title">Build the OSI Model</h1>
+        <p class="intro">
+          Drag bricks into the tower from <strong>bottom to top</strong>, then press submit to check your sequence.
+        </p>
+      </div>
+
+      <div class="status-panel" aria-live="polite">
+        <img
+          id="bulb"
+          class="bulb"
+          src="assets/bulb-off.svg"
+          alt="Status lightbulb currently off"
+          width="110"
+          height="140"
+        />
+        <p id="status-text" class="status-text">Arrange the layers and press submit.</p>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Sorting workspace">
+      <div class="tray-panel">
+        <h2>Brick Tray</h2>
+        <p class="panel-help">Drag bricks from here into the tower, or drag them back out to unstack.</p>
+        <div
+          id="tray"
+          class="tray dropzone"
+          aria-label="Brick tray"
+        ></div>
+      </div>
+
+      <div class="tower-panel">
+        <h2>Build Tower</h2>
+        <p class="panel-help">Bottom slot is at the bottom of the tower. Fill all seven slots.</p>
+        <div id="tower" class="tower" aria-label="OSI model tower">
+          <div class="slot" data-index="6" aria-label="Top slot"></div>
+          <div class="slot" data-index="5"></div>
+          <div class="slot" data-index="4"></div>
+          <div class="slot" data-index="3"></div>
+          <div class="slot" data-index="2"></div>
+          <div class="slot" data-index="1"></div>
+          <div class="slot" data-index="0" aria-label="Bottom slot"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Controls">
+      <button id="submit-btn" class="primary-btn" type="button">Submit</button>
+      <button id="reset-btn" class="secondary-btn" type="button">Reset</button>
+    </section>
+  </main>
+
+  <template id="brick-template">
+    <button class="brick" type="button" draggable="true">
+      <span class="stud stud-1" aria-hidden="true"></span>
+      <span class="stud stud-2" aria-hidden="true"></span>
+      <span class="stud stud-3" aria-hidden="true"></span>
+      <span class="stud stud-4" aria-hidden="true"></span>
+      <span class="brick-label"></span>
+    </button>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
